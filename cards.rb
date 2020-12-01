@@ -1,7 +1,7 @@
 #ruby
 #!/usr/bin/env ruby
 require 'optparse'
-require_relative "game"
+require_relative "lib/game"
 
 options = {}
 
