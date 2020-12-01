@@ -7,13 +7,13 @@ options = {}
 
 OptionParser.new do |parser|
   parser.on("-n", "--numplayers NUM_PLAYERS", "The number of players") do |num|
-    options[:players] = num
+    options[:num_players] = num
   end
 end.parse!
 
-num = options[:players].to_i
-if num < 2
-  puts "Please enter a value between 2 and 25."
+num = options[:num_players].to_i
+if num < 2 || num > 25
+  $stderr.puts "Please enter a value for -n between 2 and 25."
 else
   Game.new(num_players: num)
 end
